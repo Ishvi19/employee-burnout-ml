@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Burnout Predictor</title>
+</head>
+<body>
+    <h2>Employee Burnout Prediction</h2>
+
+    <form action="/predict" method="post">
+        Gender (0/1): <input type="number" name="gender"><br><br>
+        Company Type (0/1): <input type="number" name="company_type"><br><br>
+        WFH (0/1): <input type="number" name="wfh"><br><br>
+        Age: <input type="number" name="age"><br><br>
+        Designation: <input type="number" name="designation"><br><br>
+        Resource Allocation: <input type="number" name="resource"><br><br>
+        Mental Fatigue Score: <input type="text" name="fatigue"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+        <h3>{{ result }}</h3>
+    {% endif %}
+</body>
+</html>
